@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random  quote generator</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    <!-- style -->
+    <style>
+       
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           
+            background-color: 	#475c6c;
+
+        }
+        @media screen and ( max-width:660px ) {
+         .hero{
+            width: 80%;
+            height: 410px;
+            margin: 0 auto;
+            background: #41295a;
+            background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+            background: linear-gradient(to right, #2F0743, #41295a);
+
+            margin-top: 100px;
+            border-radius: 12px;
+            box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -webkit-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -moz-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+        }
+        .hero-area{
+            padding: 40px 20px;
+            text-align: center;
+            font-family: "Roboto Mono", monospace;
+        }
+        .hero-text{
+            height: 150px;
+        }
+        p{
+            padding: 40px 0px 20px 0;
+            color: #fff;
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+        }
+        h2{
+            color: #D20062;
+            font-size: 0.9rem;
+        }
+        button{
+            margin-top: 130px;
+            font-size: 0.8rem;
+            padding: 8px 14px;
+            outline: none;
+            font-family: "Roboto Mono", monospace;
+            border: none;
+            background: #3494E6;
+            background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+            background: linear-gradient(to right, #EC6EAD, #3494E6);
+            color: #fff;
+            border-radius: 7px;
+            cursor: pointer;
+            box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -webkit-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -moz-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+        }
+        button:hover{
+            outline: 2px solid #fff;
+        }
+       
+        }
+        
+
+        @media screen and ( min-width:660px ) {
+        .hero{
+            width: 600px;
+            height: 330px;
+            margin: 0 auto;
+            background: #41295a;
+            background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+            background: linear-gradient(to right, #2F0743, #41295a);
+
+            margin-top: 100px;
+            border-radius: 12px;
+            box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -webkit-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -moz-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+        }
+        .hero-area{
+            padding: 40px 20px;
+            text-align: center;
+            font-family: "Roboto Mono", monospace;
+        }
+        .hero-text{
+            height: 150px;
+        }
+        p{
+            padding: 40px 0px 20px 0;
+            color: #fff;
+            line-height: 1.5rem;
+        }
+        h2{
+            color: #D20062;
+            font-size: 1rem;
+        }
+        button{
+            margin-top: 50px;
+            font-size: 0.9rem;
+            padding: 8px 14px;
+            outline: none;
+            font-family: "Roboto Mono", monospace;
+            border: none;
+            background: #3494E6;
+            background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+            background: linear-gradient(to right, #EC6EAD, #3494E6);
+            color: #fff;
+            border-radius: 7px;
+            cursor: pointer;
+            box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -webkit-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+            -moz-box-shadow: 1px -1px 10px 0px rgba(0,0,0,0.39);
+        }
+        button:hover{
+            outline: 2px solid #fff;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-area">
+            <div class="hero-text">
+                <p class="quote">"The greatest glory in living lies not in never falling, but in rising every time we fall."</p>
+            <h2 class="writter">-Nelson Mandela</h2>
+            </div>
+            
+            <button>Find quote</button>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script>
+        
+
+        //array
+         const quotes = [{
+            quote: `"The way to get started is to quit talking and begin doing."`,
+            writter: `-Walt Disney`
+         },{
+            quote: `"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma which is living with the results of other people's thinking."`,
+            writter: `-Steve Jobs`
+         },{
+            quote: `"The future belongs to those who believe in the beauty of their dreams."`,
+            writter: ` -Eleanor Roosevelt`
+         },{
+            quote: `"If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough."`,
+            writter: `-Oprah Winfrey`
+         },{
+            quote: `"If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. "`,
+            writter: ` -James Cameron`
+         },{
+            quote: `"You may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one."`,
+            writter: `-John Lennon`
+         },{
+            quote: `"You must be the change you wish to see in the world."`,
+            writter: ` -Mahatma Gandhi`
+         },{
+            quote: `"Spread love everywhere you go. Let no one ever come to you without leaving happier."`,
+            writter: `-Mother Teresa`
+         },{
+            quote: `"The only thing we have to fear is fear itself. "`,
+            writter: `-Franklin D. Roosevelt`
+         },{
+            quote: `"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that."`,
+            writter: `-Martin Luther King Jr.`
+         },{
+            quote: `"Do one thing every day that scares you. "`,
+            writter: `-Eleanor Roosevelt`
+         },{
+            quote: `"Well done is better than well said."`,
+            writter: `-Benjamin Franklin`
+         },{
+            quote: `"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart."`,
+            writter: `-Helen Keller`
+         },{
+            quote: `"It is during our darkest moments that we must focus to see the light. "`,
+            writter: `-Aristotle`
+         },{
+            quote: `"Do not go where the path may lead, go instead where there is no path and leave a trail"`,
+            writter: `-Ralph Waldo Emerson`
+         },{
+            quote: `"Be yourself; everyone else is already taken."`,
+            writter: `-Oscar Wilde`
+         },{
+            quote: `"In the end, it's not the years in your life that count. It's the life in your years."`,
+            writter: `-Abraham Lincoln`
+         },{
+            quote: `"In this life we cannot do great things. We can only do small things with great love"`,
+            writter: ` -Mother Teresa`
+         },{
+            quote: `"Many of life's failures are people who did not realize how close they were to success when they gave up. "`,
+            writter: `-Thomas A. Edison`
+         },{
+            quote: `"Life is either a daring adventure or nothing."`,
+            writter: `-Helen Keller`
+         },
+         ]
+
+            //DOM selections
+        const quoteHT = document.querySelector('.quote');
+        const writterHT = document.querySelector('.writter');
+        const btn = document.querySelector('button');
+
+        //event
+         btn.addEventListener('click', ()=>{
+            let random = Math.floor(Math.random() * quotes.length);
+            quoteHT.innerHTML =quotes[random].quote;
+            writterHT.innerHTML = quotes[random].writter;
+         });
+</script>
+</body>
+</html>
